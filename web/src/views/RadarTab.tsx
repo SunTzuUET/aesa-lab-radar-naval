@@ -97,7 +97,7 @@ export function RadarTab(p: { radar: RadarParams; updRadar: (p: Partial<RadarPar
       </div>
 
       <div className="col">
-        <Panel title={tr('SNR frente a distancia', 'SNR versus range')} hint={tr('espacio libre con pérdidas y eclipsado · el entorno se añade en Entorno y Escenarios', 'free space with losses and eclipsing · the environment is added in Environment and Scenarios')}>
+        <Panel title={tr('SNR frente a distancia', 'SNR versus range')} hint={tr('espacio libre con pérdidas y eclipsado · el entorno se añade en Entorno', 'free space with losses and eclipsing · the environment is added in Environment')}>
           <LinePlot
             series={[{ x: out.R, y: out.snr, color: '#4fd6ff', width: 1.8, label: tr('SNR integrada', 'integrated SNR') }]}
             xRange={[0, out.rMax / 1e3]} yRange={[-10, 60]} xLabel={tr('distancia (km)', 'range (km)')} yLabel="dB" aspect={0.45} xTicks={out.nTicks} yTicks={7}
@@ -124,7 +124,7 @@ export function RadarTab(p: { radar: RadarParams; updRadar: (p: Partial<RadarPar
             SNR = Pₜ τ Gₜ Gᵣ λ² σ N / ((4π)³ k T₀ F L R⁴){tr(', con integración coherente de N pulsos. L = RF + procesado: ventana y celda Doppler, muestras de distancia, forma del haz y CFAR, validadas en MATLAB', ', with coherent integration of N pulses. L = RF + processing: Doppler window and cell, range sampling, beam shape and CFAR, validated in MATLAB')}
             (fase3_linea_base/val_perdidas.m). {tr('El eco que llega mientras se transmite pierde f² (eclipsado) y solo cuenta la detección dentro del alcance no ambiguo. Pd: Swerling 1 exacta y Swerling 0 por Albersheim. Horizonte con tierra 4/3.', 'An echo arriving while transmitting loses f² (eclipsing), and only detections within the unambiguous range count. Pd: exact Swerling 1 and Swerling 0 by Albersheim. Horizon with 4/3 Earth.')}
           </p>
-          <p className="note">{tr('Aquí solo espacio libre. El clutter, el multitrayecto y la atenuación están en Entorno y Escenarios; la cadena de señal (compresión, Doppler y CFAR), en Señal.', 'Free space only here. Clutter, multipath and attenuation are in Environment and Scenarios; the signal chain (compression, Doppler and CFAR) is in Signal.')}</p>
+          <p className="note">{tr('Aquí solo espacio libre. El clutter, el multitrayecto y la atenuación están en Entorno; la cadena de señal (compresión, Doppler y CFAR), en Señal.', 'Free space only here. Clutter, multipath and attenuation are in Environment; the signal chain (compression, Doppler and CFAR) is in Signal.')}</p>
         </Panel>
       </div>
 

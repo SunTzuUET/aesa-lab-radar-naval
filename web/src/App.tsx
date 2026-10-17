@@ -10,7 +10,6 @@ import { AntennaTab } from './views/AntennaTab';
 import { RadarTab } from './views/RadarTab';
 import { ModelTab } from './views/ModelTab';
 import { EnvironmentTab } from './views/EnvironmentTab';
-import { ScenariosTab } from './views/ScenariosTab';
 const SignalTab = lazy(() => import('./views/SignalTab').then(m => ({ default: m.SignalTab })));
 const ExperimentsTab = lazy(() => import('./views/ExperimentsTab').then(m => ({ default: m.ExperimentsTab })));
 const ValidationTab = lazy(() => import('./views/ValidationTab').then(m => ({ default: m.ValidationTab })));
@@ -19,12 +18,12 @@ import { DEFAULT_COUPLING, applyCoupling, couplingFor, elementCorrDb, type Coupl
 import { LangSwitch, tr, useLang } from './i18n';
 import { DEFAULT_ERRORS, drawErrors, hasErrors, predictErrors, realizeErrors, type HwErrors } from './engine/errors';
 
-export type Tab = 'antenna' | 'radar' | 'env' | 'scen' | 'sig' | 'model' | 'exp' | 'val';
-const HASH: Record<Tab, string> = { antenna: '#antena', radar: '#radar', env: '#entorno', scen: '#escenarios', model: '#modelo', sig: '#senal', exp: '#experimentos', val: '#validacion' };
+export type Tab = 'antenna' | 'radar' | 'env' | 'sig' | 'model' | 'exp' | 'val';
+const HASH: Record<Tab, string> = { antenna: '#antena', radar: '#radar', env: '#entorno', model: '#modelo', sig: '#senal', exp: '#experimentos', val: '#validacion' };
 const fromHash = (): Tab => (Object.keys(HASH) as Tab[]).find(t => HASH[t] === location.hash) ?? 'antenna';
 const TABS = (): { id: Tab; label: string }[] => [
   { id: 'antenna', label: tr('Antena', 'Antenna') }, { id: 'radar', label: 'Radar' }, { id: 'env', label: tr('Entorno', 'Environment') },
-  { id: 'scen', label: tr('Escenarios', 'Scenarios') }, { id: 'sig', label: tr('Señal', 'Signal') }, { id: 'model', label: tr('Modelo 3D', '3D model') },
+  { id: 'sig', label: tr('Señal', 'Signal') }, { id: 'model', label: tr('Modelo 3D', '3D model') },
   { id: 'exp', label: tr('Experimentos', 'Experiments') }, { id: 'val', label: tr('Validación', 'Validation') },
 ];
 
@@ -170,8 +169,6 @@ export default function App() {
             ? <Suspense fallback={<div className="placeholder">{tr('cargando resultados…', 'loading results…')}</div>}><ExperimentsTab /></Suspense>
           : tab === 'val'
             ? <Suspense fallback={<div className="placeholder">{tr('cargando referencias…', 'loading references…')}</div>}><ValidationTab /></Suspense>
-          : tab === 'scen'
-            ? <ScenariosTab env={dEnv} updEnv={updEnv} radar={radar} updRadar={updRadar} sim={sim} beam={beam} />
           : tab === 'env'
             ? <EnvironmentTab env={dEnv} updEnv={updEnv} radar={radar} updRadar={updRadar} sim={sim} beam={beam} failed={dFailed} />
             : <ModelTab beam={beam} sim={sim} failed={dFailed} updBeam={updBeam} updFace={updFace} env={dEnv} radar={radar}

@@ -673,7 +673,7 @@ Hipótesis: el clutter se trata como ruido blanco gaussiano añadido (sin estad�
 - Punto de referencia R_ref, evaluado exactamente: SINR, SNR, CNR, F² en dB (20·log10 F), P_d (Swerling 1).
 - **Factor limitante** (`≈118`), en este orden: no visible → «horizonte»; CNR_ref > 0 dB → «clutter»; 20·log10 F_ref < −6 dB → «multitrayecto»; si no, «ruido». **[supuesto del modelo]** Umbrales de clasificación propios.
 
-Escenarios definidos (`SCENARIOS ≈21-53`): S1 vigilancia aérea (3 m², 5000 m, R_ref 200 km), S2 rozaolas (0,1 m², 7 m, 20 km), S5 dron (0,01 m², 100 m, 10 km). S3 (jammer) y S4 (multifunción) están declarados pero sin implementar (`ready: false`). Los barridos (`runSweep ≈210`, `engine/sweep.worker.ts`) repiten `evaluate` con n = 400 variando un parámetro y, opcionalmente, una serie (polarización, estabilización, aletas, envolvente frente a haz fijo).
+Escenarios definidos (`SCENARIOS ≈21-53`): S1 vigilancia aérea (3 m², 5000 m, R_ref 200 km), S2 rozaolas (0,1 m², 7 m, 20 km), S5 dron (0,01 m², 100 m, 10 km). S3 (jammer) y S4 (multifunción) están declarados pero sin implementar (`ready: false`). Los barridos (`runSweep ≈210`) repiten `evaluate` con n = 400 variando un parámetro y, opcionalmente, una serie (polarización, estabilización, aletas, envolvente frente a haz fijo).
 
 ---
 

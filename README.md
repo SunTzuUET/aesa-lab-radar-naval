@@ -92,7 +92,6 @@ The other tabs:
   - ITU-R gases and rain
   - K-distributed sea clutter
   - multipath
-- **Scenarios:** S1, S2 and S5, with sweeps over any parameter.
 - **3D model:** ship motion with beam stabilization, and a 360° search with all four faces.
 
 ---

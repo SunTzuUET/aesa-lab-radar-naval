@@ -82,7 +82,6 @@ Cada experimento se reproduce con un solo script y tiene su página en la pesta�
 Además de esas pestañas:
 - **Radar:** ecuación radar y detección (Swerling 0/1, Albersheim).
 - **Entorno:** viento y oleaje; refracción; ecuación parabólica con conducto de evaporación y capa de inversión; gases y lluvia ITU-R; clutter de mar K-distribuido; multitrayecto.
-- **Escenarios:** S1, S2 y S5, con barridos de cualquier parámetro.
 - **Modelo 3D:** buque con movimiento y estabilización del haz, y búsqueda de 360° con las cuatro caras.
 
 ---

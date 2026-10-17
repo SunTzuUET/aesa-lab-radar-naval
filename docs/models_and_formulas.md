@@ -673,7 +673,7 @@ Assumptions: the clutter is treated as additive white Gaussian noise (no K stati
 - Reference point R_ref, evaluated exactly: SINR, SNR, CNR, F² in dB (20·log10 F), P_d (Swerling 1).
 - **Limiting factor** (`≈118`), in this order: not visible → "horizon"; CNR_ref > 0 dB → "clutter"; 20·log10 F_ref < −6 dB → "multipath"; otherwise, "noise". **[model assumption]** Classification thresholds of our own.
 
-Defined scenarios (`SCENARIOS ≈21-53`): S1 air surveillance (3 m², 5000 m, R_ref 200 km), S2 sea-skimmer (0.1 m², 7 m, 20 km), S5 drone (0.01 m², 100 m, 10 km). S3 (jammer) and S4 (multifunction) are declared but not implemented (`ready: false`). The sweeps (`runSweep ≈210`, `engine/sweep.worker.ts`) repeat `evaluate` with n = 400 varying one parameter and, optionally, a series (polarization, stabilization, fins, envelope versus fixed beam).
+Defined scenarios (`SCENARIOS ≈21-53`): S1 air surveillance (3 m², 5000 m, R_ref 200 km), S2 sea-skimmer (0.1 m², 7 m, 20 km), S5 drone (0.01 m², 100 m, 10 km). S3 (jammer) and S4 (multifunction) are declared but not implemented (`ready: false`). The sweeps (`runSweep ≈210`) repeat `evaluate` with n = 400 varying one parameter and, optionally, a series (polarization, stabilization, fins, envelope versus fixed beam).
 
 ---
 
