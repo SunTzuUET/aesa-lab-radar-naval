@@ -2,6 +2,7 @@
 
 [English](README.md) · **Español**
 
+[![Demo en vivo](https://img.shields.io/badge/demo%20en%20vivo-abrir-c8641e)](https://suntzuuet.github.io/aesa-lab-radar-naval/?lang=es)
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2026a-0076a8)
 ![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Three.js-3178c6)
 ![Validación](https://img.shields.io/badge/validaci%C3%B3n%20MATLAB-75%2F75-2ea44f)
@@ -67,6 +68,8 @@ Cada experimento se reproduce con un solo script y tiene su página en la pesta�
 ---
 
 ## 2 · El simulador web
+
+**Pruébalo en el navegador:** https://suntzuuet.github.io/aesa-lab-radar-naval/?lang=es
 
 <table>
 <tr>

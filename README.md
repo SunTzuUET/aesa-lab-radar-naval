@@ -2,6 +2,7 @@
 
 **English** · [Español](README.es.md)
 
+[![Live demo](https://img.shields.io/badge/live%20demo-open-c8641e)](https://suntzuuet.github.io/aesa-lab-radar-naval/)
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2026a-0076a8)
 ![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Three.js-3178c6)
 ![Validation](https://img.shields.io/badge/MATLAB%20validation-75%2F75-2ea44f)
@@ -71,6 +72,8 @@ To test this, I reran the thesis's final experiment with the mutual impedances o
 ---
 
 ## 2 · The web simulator
+
+**Try it in the browser:** https://suntzuuet.github.io/aesa-lab-radar-naval/
 
 <table>
 <tr>
